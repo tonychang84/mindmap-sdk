@@ -1,10 +1,9 @@
-# mindmap-sdk
-
+```markdown
 # 🧠 寻简思维导图 SDK · 示例项目
 
 > 一行代码，为你的产品注入 AI 思维导图能力
 
-这个仓库包含了**寻简思维导图 SDK** 的完整集成示例。你可以直接运行 `examples/vanilla-js/index.html`，体验从 **iframe 嵌入 → SDK 就绪 → 数据发送 → 思维导图渲染** 的完整流程。
+这个仓库包含了**寻简思维导图 SDK** 的完整集成示例，包括原生 JavaScript 和 React 两种框架的实现。
 
 ---
 
@@ -24,40 +23,38 @@
 
 > ⚠️ **注意**：API Key 仅在创建时显示一次，请妥善保存。
 
-### 2️⃣ 运行示例
+### 2️⃣ 选择示例
 
-```bash
-# 克隆仓库
-git clone https://github.com/your-username/xunjian-mindmap-sdk-examples.git
-cd xunjian-mindmap-sdk-examples
-
-# 直接用浏览器打开示例（无需安装任何依赖）
-open examples/vanilla-js/index.html
-```
+- **原生 JavaScript**：直接运行 `examples/vanilla-js/index.html`（无需任何依赖）
+- **React**：`cd examples/react && npm install && npm run dev`
 
 ### 3️⃣ 替换 API Key
 
-在 `examples/vanilla-js/index.html` 中找到 `API_KEY` 变量，替换为你的 Key：
-
-```javascript
-const API_KEY = '你的_API_Key';
-```
-
-刷新页面，思维导图即可渲染。
+在对应的示例文件中替换 `API_KEY` 变量，刷新页面即可看到思维导图渲染效果。
 
 ---
 
 ## 📁 项目结构
 
 ```
-xunjian-mindmap-sdk-examples/
+mindmap-sdk/
 ├── README.md
 ├── LICENSE
 ├── .gitignore
+├── screenshot.png
 └── examples/
-    └── vanilla-js/          # 原生 JavaScript 示例（当前）
-        ├── index.html       # 完整示例代码
-        └── README.md        # 示例说明
+    ├── vanilla-js/          # 原生 JavaScript 示例
+    │   ├── index.html
+    │   └── README.md
+    └── react/               # React 框架示例
+        ├── README.md
+        ├── package.json
+        ├── vite.config.js
+        ├── index.html
+        └── src/
+            ├── main.jsx
+            ├── App.jsx
+            └── App.css
 ```
 
 ---
@@ -117,7 +114,7 @@ const sdkData = {
 | 链接 | 说明 |
 |------|------|
 | [开放平台](https://www.mindyushu.com/api.html) | 申请 API Key |
-| [SDK 文档](https://www.mindyushu.com/help.html) | 完整 API 文档 |
+| [SDK 文档](https://www.mindyushu.com/api.html) | 完整 API 文档 |
 | [商业说明](https://www.mindyushu.com/buy.html) | 定价与套餐 |
 
 ## 📄 许可证
@@ -131,3 +128,4 @@ MIT License © 2026 上海玉数科技有限公司
 ---
 
 **寻简思维导图 SDK —— 让思维可视化变得简单。**
+```
